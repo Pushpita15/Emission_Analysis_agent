@@ -132,7 +132,7 @@ def get_sector_report(sector_name:str) -> str:
         
     sector_summary_str=""
     for index, row in sector_summary.iterrows():
-        sector_summary_str += f"Subsector: {row['Subsector_Name']}, Mar_2025_Total: {row['Mar_2025_Total']}, Prev_Month: {row['Prev_Month']}, Mar_2024_Total: {row['Mar_2024_Total']}, Monthly_%_change: {row['Monthly_%_change']}, 2025_YTD: {row['2025_YTD']}, 2024_YTD: {row['2024_YTD']}, 2023_YTD: {row['2023_YTD']}, 2022_YTD: {row['2022_YTD']}, 2021_YTD: {row['2021_YTD']}\n"
+        sector_summary_str += f"Subsector: {row['Subsector_Name']}, Mar_2025_Total: {str(row['Mar_2025_Total'])}, Prev_Month: {str(row['Prev_Month'])}, Mar_2024_Total: {str(row['Mar_2024_Total'])}, Monthly_%_change: {str(row['Monthly_%_change'])}, 2025_YTD: {str(row['2025_YTD'])}, 2024_YTD: {str(row['2024_YTD'])}, 2023_YTD: {str(row['2023_YTD'])}, 2022_YTD: {str(row['2022_YTD'])}, 2021_YTD: {str(row['2021_YTD'])}\n"
     
     return {"result" : "Sector Report:\n".join(sector_summary_str)}
 
